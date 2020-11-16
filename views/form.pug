@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Please Enter a New Message
+
+  form(method='POST' action='/new')
+    div
+        label(for='user') Author's Name:
+        input(type='text', placeholder='First Last')
+    div
+        label(for='text') Message Text:
+        textarea(type='textarea', placeholder='Please enter your message here')
+    button(type='submit') Submit
