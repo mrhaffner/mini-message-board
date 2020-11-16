@@ -19,8 +19,15 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: "Mini Messageboard", messages: messages });
 });
 
+//is this correct?
 router.get('/new', function(req, res, next) {
   res.render('form', { title: "Mini Messageboard", messages: messages });
+});
+
+//really not sure if this is correct
+router.post('/new', function(req, res, next) {
+  messages.push({text: req.body.messageText, user: req.body.messageUser, added: new Date()});
+  res.redirect('/')
 });
 
 module.exports = router;

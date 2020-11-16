@@ -7,8 +7,8 @@ block content
   form(method='POST' action='/new')
     div
         label(for='user') Author's Name:
-        input(type='text', placeholder='First Last')
+        input(type='text', placeholder='First Last', name='messageUser')
     div
         label(for='text') Message Text:
-        textarea(type='textarea', placeholder='Please enter your message here')
+        textarea(type='textarea', placeholder='Please enter your message here', name='messageText')
     button(type='submit') Submit
